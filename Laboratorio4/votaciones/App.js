@@ -1,5 +1,5 @@
-import React, { useState} from 'react'
-
+import React, { useState} from 'react';
+import Estadisticas from './componentes/estadisticas';
 import "./css/app.css";
 
 const App = () => {
@@ -7,8 +7,6 @@ const App = () => {
   const [bueno, setBueno] = useState(0)
   const [normal, setNormal] = useState(0)
   const [malo, setMalo] = useState(0)
-
-  
 
   const total = bueno + malo + normal
   const promedio = total / 3
@@ -43,15 +41,7 @@ const App = () => {
         <button className ="boton" onClick={clicknormal} >NORMAL </button>
         <button className ="boton" onClick={clickmalo}>MALO </button>
       </div>
-      <div className="estadistica">
-        <h2 className="textestadistica">Estadisticas</h2>
-        <p className="textvoto">Votaciones de Bueno: {bueno}</p>
-        <p className="textvoto">Votaciones de Normal: {normal}</p>
-        <p className="textvoto">Votaciones de Malo: {malo}</p>
-        <p className="textvoto">Total de Votos: {total}</p>
-        <p className="textvoto">Promedio de Votos: {promedio}</p>
-        <p className="textvoto">Votos Positivos: {positivo}%</p>
-      </div>
+      <Estadisticas bueno={bueno} normal={normal} malo={malo} promedio={promedio} total={total} positivo={positivo}/>
     </div>
   )
 }
