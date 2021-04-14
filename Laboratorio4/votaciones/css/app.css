@@ -1,0 +1,33 @@
+.container{
+    background-color: black;
+    justify-content: center;
+    flex: 1;
+}
+
+.textestadistica{
+    color: blue;
+    font-size: 40;
+ 
+}
+
+.estadistica{
+    margin-top: 10;
+}
+
+.titulo{
+    color: red;
+    font-size: 80;
+    
+}
+
+.textvoto{
+    color:green;
+    font-size: 20;
+}
+
+.boton{
+    background-color: red;
+   
+    color: white;
+
+}
